@@ -20,6 +20,14 @@
     text-decoration: $textDeco;
 }
 
+// mixin보단 못미치지만 extend 알아봄
+// 완전히 똑같이 사용되는 코드일 경우 사용됨
+%boxShape {
+    border-radius: 20px;
+    border: 3px solid #f00;
+    box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
 html {
     font-size: 18px;
 }
@@ -42,7 +50,7 @@ a {
 #box1 {
     // & { Ampersand (앰퍼샌드) 상위 자신을 나타냄. 생략해도 됨.
     @include fontSizeBgColor (40px, #ffcccc);
-    box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+    @extend %boxShape;
     &:hover {
         background-color: #ccc;
     } // 중복된 코드 사용 시 따로 빼서 사용
@@ -79,9 +87,7 @@ a {
 
 #box1 #box2 {
     @include font_size_color();
-    border-radius: 20px;
-    border: 3px solid #f00;
-    box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+    @extend %boxShape;
     &>a {
         color: #ee6633;
         text-decoration: none;

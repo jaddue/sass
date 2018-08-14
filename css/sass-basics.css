@@ -2,6 +2,13 @@
 /*
 주석 컴파일링 됨
 */
+#box1, #box1 #box2 {
+  border-radius: 20px;
+  border: 3px solid #f00;
+  -webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
 html {
   font-size: 18px;
 }
@@ -24,8 +31,6 @@ a {
 #box1 {
   font-size: 40px;
   background-color: #ffcccc;
-  -webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
 }
 
 #box1:hover {
@@ -73,10 +78,6 @@ a {
 #box1 #box2 {
   font-size: 50px;
   background-color: #ff00aa;
-  border-radius: 20px;
-  border: 3px solid #f00;
-  -webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
 }
 
 #box1 #box2 > a {
