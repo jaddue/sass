@@ -4,21 +4,8 @@
 주석 컴파일링 됨
 */
 
-// mixin 속성을 묶는
-@mixin fontSizeBgColor($fontSize, $bgColor) {
-    font-size: $fontSize;
-    background-color: $bgColor;
-}
-// 인자 값을 지정할 수도 있음 그럴 경우 인자값 없이 쓰면 기본값이 들어감
-@mixin font_size_color($fontSize: 50px, $bgColor: #ff00aa) {
-    font-size: $fontSize;
-    background-color: $bgColor;
-}
-
-@mixin linkStyle($textColor, $textDeco) {
-    color: $textColor;
-    text-decoration: $textDeco;
-}
+// _빼고 scss 확장자 빼고
+@import "mixins";
 
 // mixin보단 못미치지만 extend 알아봄
 // 완전히 똑같이 사용되는 코드일 경우 사용됨

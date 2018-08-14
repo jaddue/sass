@@ -1,0 +1,16 @@
+// _로 시작하면 컴파일되지 않음
+
+// mixin 속성을 묶는
+@mixin fontSizeBgColor($fontSize, $bgColor) {
+    font-size: $fontSize;
+    background-color: $bgColor;
+}
+// 인자 값을 지정할 수도 있음 그럴 경우 인자값 없이 쓰면 기본값이 들어감
+@mixin font_size_color($fontSize: 50px, $bgColor: #ff00aa) {
+    font-size: $fontSize;
+    background-color: $bgColor;
+}
+@mixin linkStyle($textColor, $textDeco) {
+    color: $textColor;
+    text-decoration: $textDeco;
+}
