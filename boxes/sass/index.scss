@@ -1,43 +1,6 @@
-// 변수
-$color_white: #fff;
-$color_black: #000;
-$color_grey: #ccc;
-$color_grey_light: #efefef;
-$color_red: #f00;
-$color_blue: #00f;
-$border_color: $color_blue;
-// mixin
-// 너비 높이 패딩 mixin
-@mixin width_height_padding($w, $h, $p) {
-    width: $w;
-    height: $h;
-    padding: $p;
-}
-// 상하좌우 가운데 정렬 mixin
-@mixin pos_abs_center() {
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-}
-// 좌우 가운데 정렬 mixin
-@mixin pos_abs_center_horizontal() {
-    position: absolute;
-    left:50%;
-    transform: translateX(-50%);
-}
-// 상하 가운데 정렬 mixin
-@mixin pos_abs_center_horizontal() {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-//
-body {
-    margin: 0;
-    background-color: $color_grey_light;
-    font-family: sans-serif;
-}
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/base";
 
 // Nesting
 .box {
@@ -51,6 +14,17 @@ body {
         border: 3px solid $color_white;
         border-color: $border_color;
     }
+    // 미디어쿼리 적용 방법
+    @include mq('phone') {
+        border: none;
+    }
+    @include mq('tablet-land') {
+        border: 2px solid $border_color;
+    }
+    @include mq('desktop-big') {
+        border: 10px solid $border_color;
+    }
+
     &_inner {
         // padding: 10px;
         // width: initial;

@@ -1,0 +1,47 @@
+// mixin
+// 너비 높이 패딩 mixin
+@mixin width_height_padding($w, $h, $p) {
+    width: $w;
+    height: $h;
+    padding: $p;
+}
+// 상하좌우 가운데 정렬 mixin
+@mixin pos_abs_center() {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+// 좌우 가운데 정렬 mixin
+@mixin pos_abs_center_horizontal() {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+// 상하 가운데 정렬 mixin
+@mixin pos_abs_center_horizontal() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+// 미디어쿼리 mixin
+@mixin mq($screen-width) {
+    @if $screen-width == 'phone' {
+        @media screen and (max-width: 600px) {
+            @content;
+        }
+    }
+    @else if $screen-width == 'tablet-land' {
+        @media screen and (min-width: 601px) and (max-width: 899px) {
+            @content;
+        }
+    }
+    @else if $screen-width == 'desktop-big' {
+        @media screen and (min-width: 1201px) {
+            @content;
+        }
+    }
+    @else {
+
+    }
+}
