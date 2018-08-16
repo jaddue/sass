@@ -1,0 +1,66 @@
+// 변수
+$color_white: #fff;
+$color_black: #000;
+$color_grey: #ccc;
+$color_grey_light: #efefef;
+$color_red: #f00;
+$color_blue: #00f;
+$border_color: $color_blue;
+// mixin
+// 너비 높이 패딩 mixin
+@mixin width_height_padding($w, $h, $p) {
+    width: $w;
+    height: $h;
+    padding: $p;
+}
+// 상하좌우 가운데 정렬 mixin
+@mixin pos_abs_center() {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+// 좌우 가운데 정렬 mixin
+@mixin pos_abs_center_horizontal() {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+// 상하 가운데 정렬 mixin
+@mixin pos_abs_center_horizontal() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+//
+body {
+    margin: 0;
+    background-color: $color_grey_light;
+    font-family: sans-serif;
+}
+
+// Nesting
+.box {
+    // width: 300px;
+    // height: 300px;
+    // padding: 20px;
+    @include width_height_padding(300px, 300px, 20px);
+    @include pos_abs_center();
+    &,
+    &_inner {
+        border: 3px solid $color_white;
+        border-color: $border_color;
+    }
+    &_inner {
+        // padding: 10px;
+        // width: initial;
+        // height: 40px;
+        @include width_height_padding(initial, 40px, 10px);
+        background-color: $color_grey;
+    }
+    & .bi_title {
+        font-size: 20px;
+        color: $color_white;
+        background-color: rgba($color_black, .5);
+    }
+}
