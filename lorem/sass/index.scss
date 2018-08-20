@@ -1,0 +1,11 @@
+// 국내외적으로 많이 쓰는 방법임
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/base";
+@import "base/animations";
+
+
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";

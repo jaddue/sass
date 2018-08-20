@@ -1,0 +1,8 @@
+// mixin을 모아둔 파샬
+@mixin clearfix() {
+    &::after{
+        content:"";
+        display:block;
+        clear:both;
+    }
+}

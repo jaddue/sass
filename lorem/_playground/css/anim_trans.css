@@ -1,0 +1,34 @@
+.btn {
+  font-size: 30px;
+  text-decoration: none;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+.btn:hover {
+  font-size: 50px;
+  text-decoration: underline;
+  opacity: .2;
+}
+
+@-webkit-keyframes anim1 {
+  0% {
+    -webkit-transform: translate(x, y);
+            transform: translate(x, y);
+  }
+}
+
+@keyframes anim1 {
+  0% {
+    -webkit-transform: translate(x, y);
+            transform: translate(x, y);
+  }
+}
+
+#box1 {
+  -webkit-animation-name: anim1;
+          animation-name: anim1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+/*# sourceMappingURL=anim_trans.css.map */

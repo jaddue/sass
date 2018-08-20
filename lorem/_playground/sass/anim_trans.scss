@@ -1,0 +1,22 @@
+.btn {
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 5s;
+    &:hover {
+        font-size: 50px;
+        text-decoration: underline;
+        opacity: .2;
+    }
+}
+
+//animation
+@keyframes anim1 {
+    0% {
+        transform: translate(x, y);
+    }
+}
+
+#box1 {
+    animation-name: anim1;
+    animation-duration: 5s;
+}
